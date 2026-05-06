@@ -1,8 +1,24 @@
 # TaskFlow
 
+[![Live Demo](https://img.shields.io/badge/demo-live-22c55e?style=for-the-badge&logo=vercel)](https://taskflow-lovat-seven.vercel.app)
+[![Repo](https://img.shields.io/badge/repo-github-181717?style=for-the-badge&logo=github)](https://github.com/Lucas-Fermau/taskflow)
+[![Stack](https://img.shields.io/badge/stack-TypeScript%20%C2%B7%20React%20%C2%B7%20Express%20%C2%B7%20Prisma-6366f1?style=for-the-badge)](https://taskflow-lovat-seven.vercel.app)
+
 Aplicação full-stack de gerenciamento de tarefas com autenticação, prioridades, datas de entrega, busca e tema claro/escuro.
 
+> 🌐 **Demo ao vivo:** **<https://taskflow-lovat-seven.vercel.app>** — crie uma conta de teste e use direto no navegador, sem instalar nada.
+
 > Projeto de portfólio criado para demonstrar engenharia full-stack: API REST tipada, arquitetura em camadas, autenticação JWT, cache com invalidação automática no front e UI responsiva.
+
+---
+
+## Acesso rápido
+
+| | |
+|---|---|
+| 🌐 **App** | <https://taskflow-lovat-seven.vercel.app> |
+| 🔌 **API** | <https://taskflow-api-two.vercel.app/api/health> |
+| 💻 **Repo** | <https://github.com/Lucas-Fermau/taskflow> |
 
 ---
 
