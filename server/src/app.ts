@@ -8,7 +8,19 @@ import { errorHandler } from './middleware/errorHandler';
 export function createApp() {
   const app = express();
 
-  app.use(cors({ origin: env.CLIENT_ORIGIN, credentials: true }));
+  const allowedOrigins = env.CLIENT_ORIGIN.split(',').map((o) => o.trim());
+  app.use(
+    cors({
+      origin: (origin, cb) => {
+        if (!origin) return cb(null, true);
+        if (allowedOrigins.includes(origin) || allowedOrigins.includes('*')) {
+          return cb(null, true);
+        }
+        return cb(new Error(`Origin ${origin} not allowed by CORS`));
+      },
+      credentials: true,
+    })
+  );
   app.use(express.json({ limit: '1mb' }));
 
   app.get('/api/health', (_req, res) => {

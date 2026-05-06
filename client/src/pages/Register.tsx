@@ -44,11 +44,12 @@ export function RegisterPage() {
   });
 
   return (
-    <AuthShell title="Create your account" subtitle="Start organizing your tasks in seconds.">
+    <AuthShell title="Get started" subtitle="Create your account in seconds.">
       <form onSubmit={onSubmit} className="space-y-4">
         <Input
           label="Name"
           autoComplete="name"
+          placeholder="Ada Lovelace"
           {...register('name')}
           error={errors.name?.message}
         />
@@ -56,6 +57,7 @@ export function RegisterPage() {
           label="Email"
           type="email"
           autoComplete="email"
+          placeholder="you@example.com"
           {...register('email')}
           error={errors.email?.message}
         />
@@ -63,16 +65,20 @@ export function RegisterPage() {
           label="Password"
           type="password"
           autoComplete="new-password"
+          placeholder="At least 8 characters"
           {...register('password')}
           error={errors.password?.message}
         />
-        <Button type="submit" loading={submitting} className="w-full">
+        <Button type="submit" loading={submitting} size="lg" className="w-full">
           Create account
         </Button>
       </form>
       <p className="mt-6 text-center text-sm text-slate-600 dark:text-slate-400">
         Already have an account?{' '}
-        <Link to="/login" className="font-medium text-brand-600 hover:underline dark:text-brand-400">
+        <Link
+          to="/login"
+          className="font-semibold text-brand-600 hover:text-brand-700 hover:underline dark:text-brand-400"
+        >
           Sign in
         </Link>
       </p>
